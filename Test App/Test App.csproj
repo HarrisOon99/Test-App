@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanFD.cs" />
+    <Compile Include="HTTP.cs" />
     <Compile Include="ModbusTCP.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -71,6 +72,12 @@
     </Compile>
     <Compile Include="UserControls\UC_CANbus.Designer.cs">
       <DependentUpon>UC_CANbus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_JOTBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_JOTBox.Designer.cs">
+      <DependentUpon>UC_JOTBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Modbus.cs">
       <SubType>UserControl</SubType>
@@ -98,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_CANbus.resx">
       <DependentUpon>UC_CANbus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_JOTBox.resx">
+      <DependentUpon>UC_JOTBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Modbus.resx">
       <DependentUpon>UC_Modbus.cs</DependentUpon>

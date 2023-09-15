@@ -63,6 +63,12 @@ namespace Test_App
             UC_CANbus uc = new UC_CANbus();
             addUserControl(uc);
         }
+
+        private void JotBoxTab_Click(object sender, EventArgs e)
+        {
+            UC_JOTBox uc = new UC_JOTBox();
+            addUserControl(uc);
+        }
         #endregion
 
         #region Top bar control.
