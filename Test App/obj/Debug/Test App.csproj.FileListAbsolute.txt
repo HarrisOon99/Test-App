@@ -13,5 +13,4 @@ C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test App.csproj.CopyComplete
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.UserControls.UC_CANbus.resources
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.UserControls.UC_Modbus.resources
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.UserControls.UC_Home.resources
-C:\Projects\C# Projects\Test App\Test App\bin\Debug\Kvaser.CanLib.dll
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.UserControls.UC_JOTBox.resources
