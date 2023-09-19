@@ -493,9 +493,6 @@ namespace Test_App.UserControls
             catch { MessageBox.Show("PLC not connected through ethernet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            ModbusOutput.Text = string.Empty;
-        }
+        private void ClearButton_Click(object sender, EventArgs e){ ModbusOutput.Text = string.Empty; }
     }
 }

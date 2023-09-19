@@ -74,12 +74,12 @@ namespace Test_App.UserControls
         // Get state button.
         private void GetStateButton_Click(object sender, EventArgs e) { GetBoxState(); }
 
-        // Write custom command into command prompt. {"cmd": "get_state"}
+        // Write custom command into command prompt. ex. {"cmd": "get_state"}
         private async void CheckEnter(object sender, KeyPressEventArgs e)
         {
+            // If enter key is pressed.
             if (e.KeyChar == (char)13)
             {
-
                 string userCommand = HTTPOutput.Lines[HTTPOutput.Lines.Length - 1];
                 string response = await NewHTTPComs.HTTPSend(userCommand, BoxURL.Text, M10ComboBox.Text);
                 HTTPOutput.Text += response + Environment.NewLine;
