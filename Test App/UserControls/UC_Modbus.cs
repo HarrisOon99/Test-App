@@ -87,20 +87,31 @@ namespace Test_App.UserControls
         // Toggle PIM on and off
         private void PowerButton_Click(object sender, EventArgs e)
         {
-            if (PowerButton.Text == "OFF")
+            if (!NewTCPComs.SocketConnected(client))
             {
-                try { NewTCPComs.TCP_Mssg_Send(client, 1, 1285, 5, 1); }
-                catch
-                {
-                    MessageBox.Show("PLC not connected through ethernet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    PowerButton.Text = "OFF";
-                    PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C");
-                    return;
-                }
-                PowerButton.Text = "ON";
-                PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71");
+                MessageBox.Show("PLC disconnected", "Timeout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TCPConnect.Text = "Connect";
+                ModStateText.Text = "DISCONNECTED";
+                ModStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D");
+                NewTCPComs.ModbusTCP_close(client);
             }
-            else if (PowerButton.Text == "ON") { PIMAllOff(); }
+            else
+            {
+                if (PowerButton.Text == "OFF")
+                {
+                    try { NewTCPComs.TCP_Mssg_Send(client, 1, 1285, 5, 1); }
+                    catch
+                    {
+                        MessageBox.Show("PLC not connected through ethernet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        PowerButton.Text = "OFF";
+                        PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C");
+                        return;
+                    }
+                    PowerButton.Text = "ON";
+                    PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71");
+                }
+                else if (PowerButton.Text == "ON") { PIMAllOff(); }
+            }
         }
 
         // Turn off all PIM inputs.

@@ -1,0 +1,18 @@
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Test App.exe.config
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Test App.exe
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Test App.pdb
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Guna.UI2.dll
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Kvaser.CanLib.dll
+C:\Projects\C# Projects\Test App\Test App\bin\x86\Debug\Kvaser.CanLib.xml
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.AssemblyReference.cache
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.MainForm.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.Properties.Resources.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.UserControls.UC_CANbus.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.UserControls.UC_JOTBox.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.UserControls.UC_Modbus.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test_App.UserControls.UC_Home.resources
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.GenerateResource.cache
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.CoreCompileInputs.cache
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.CopyComplete
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.exe
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.pdb

@@ -9,6 +9,7 @@ namespace Test_App.UserControls
 
         // curl request input for reference:
         // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"get_state\"}" http://100.100.100.100:80/slide1/command
+        // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"subscribe\", \"address\": \"http://100.100.100.100:8081/stateupdate/box1\"}" http://100.100.100.100:80/slide1/command
         public UC_JOTBox()
         {
             InitializeComponent();
@@ -70,6 +71,9 @@ namespace Test_App.UserControls
             HTTPOutput.Select(HTTPOutput.Text.Length, 0);
         }
 
+        // Get state button.
+        private void GetStateButton_Click(object sender, EventArgs e) { GetBoxState(); }
+
         // Write custom command into command prompt. {"cmd": "get_state"}
         private async void CheckEnter(object sender, KeyPressEventArgs e)
         {
@@ -86,8 +90,5 @@ namespace Test_App.UserControls
 
         // Clear command prompt.
         private void ClearButton_Click(object sender, EventArgs e) { HTTPOutput.Text = string.Empty; }
-
-        // Get state button.
-        private void GetStateButton_Click(object sender, EventArgs e) { GetBoxState(); }
     }
 }

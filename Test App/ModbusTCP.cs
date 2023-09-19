@@ -98,5 +98,11 @@ namespace Test_App
             try { client.Shutdown(SocketShutdown.Both); } catch { }
             try { client.Close(); } catch { }
         }
+
+        //Check if socket is still available
+        public bool SocketConnected(Socket client)
+        {
+            return !((client.Poll(1000, SelectMode.SelectRead) && client.Available == 0) || !client.Connected);
+        }
     }
 }
