@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Test_App
 {
@@ -102,7 +103,7 @@ namespace Test_App
         //Check if socket is still available
         public bool SocketConnected(Socket client)
         {
-            return !((client.Poll(1000, SelectMode.SelectRead) && client.Available == 0) || !client.Connected);
+            try { return !((client.Poll(1000, SelectMode.SelectRead) && client.Available == 0) || !client.Connected); } catch { return false; }
         }
     }
 }

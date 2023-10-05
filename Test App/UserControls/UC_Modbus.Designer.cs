@@ -68,9 +68,9 @@
             this.StrtAddrInp = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddrValSend = new Guna.UI2.WinForms.Guna2TextBox();
             this.OutputPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.ClearButton = new Guna.UI2.WinForms.Guna2Button();
             this.ModbusOutput = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ClearButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -706,6 +706,25 @@
             this.OutputPanel.Size = new System.Drawing.Size(520, 441);
             this.OutputPanel.TabIndex = 70;
             // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.White;
+            this.ClearButton.BorderColor = System.Drawing.Color.White;
+            this.ClearButton.BorderRadius = 5;
+            this.ClearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ClearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ClearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ClearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(250)))), ((int)(((byte)(110)))));
+            this.ClearButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.Black;
+            this.ClearButton.Location = new System.Drawing.Point(205, 397);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(110, 36);
+            this.ClearButton.TabIndex = 71;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // ModbusOutput
             // 
             this.ModbusOutput.AutoScroll = true;
@@ -764,25 +783,6 @@
             this.guna2TextBox6.Size = new System.Drawing.Size(175, 24);
             this.guna2TextBox6.TabIndex = 70;
             this.guna2TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.White;
-            this.ClearButton.BorderColor = System.Drawing.Color.White;
-            this.ClearButton.BorderRadius = 5;
-            this.ClearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ClearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ClearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ClearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(250)))), ((int)(((byte)(110)))));
-            this.ClearButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.Black;
-            this.ClearButton.Location = new System.Drawing.Point(205, 397);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(110, 36);
-            this.ClearButton.TabIndex = 71;
-            this.ClearButton.Text = "Clear";
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // UC_Modbus
             // 

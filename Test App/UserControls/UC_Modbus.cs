@@ -87,31 +87,21 @@ namespace Test_App.UserControls
         // Toggle PIM on and off
         private void PowerButton_Click(object sender, EventArgs e)
         {
-            if (!NewTCPComs.SocketConnected(client))
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch {  }
+            if (PowerButton.Text == "OFF")
             {
-                MessageBox.Show("PLC disconnected", "Timeout", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TCPConnect.Text = "Connect";
-                ModStateText.Text = "DISCONNECTED";
-                ModStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D");
-                NewTCPComs.ModbusTCP_close(client);
-            }
-            else
-            {
-                if (PowerButton.Text == "OFF")
+                try { NewTCPComs.TCP_Mssg_Send(client, 1, 1285, 5, 1); }
+                catch
                 {
-                    try { NewTCPComs.TCP_Mssg_Send(client, 1, 1285, 5, 1); }
-                    catch
-                    {
-                        MessageBox.Show("PLC not connected through ethernet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        PowerButton.Text = "OFF";
-                        PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C");
-                        return;
-                    }
-                    PowerButton.Text = "ON";
-                    PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71");
+                    MessageBox.Show("PLC not connected through ethernet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PowerButton.Text = "OFF";
+                    PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C");
+                    return;
                 }
-                else if (PowerButton.Text == "ON") { PIMAllOff(); }
+                PowerButton.Text = "ON";
+                PowerButton.FillColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71");
             }
+            else if (PowerButton.Text == "ON") { PIMAllOff(); }
         }
 
         // Turn off all PIM inputs.
@@ -152,6 +142,7 @@ namespace Test_App.UserControls
         // Toggle MCM on and off
         private void MCMButton_Click(object sender, EventArgs e)
         {
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch { }
             if (MCMButton.Text == "OFF")
             {
                 try { NewTCPComs.TCP_Mssg_Send(client, 1, 1288, 5, 1); }
@@ -455,6 +446,7 @@ namespace Test_App.UserControls
         // Send custom command function.
         private void CmmdSend_Click(object sender, EventArgs e)
         {
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch { }
             try
             {
                 if (FunctionComboBox.Text == "") { throw new ArgumentException("Please select function code."); }
@@ -481,12 +473,11 @@ namespace Test_App.UserControls
             try 
             { 
                 int PLCReply = NewTCPComs.TCP_Mssg_Send(client, 1, startAddr, FunctionCode, desiredVal);
-                int Returned = PLCReply;
-                if (Returned > 60000) { Returned -= 65535; }
-                if (FunctionCode == 1) { ModbusOutput.Text += "Reading coil " + startAddr + "." + " Returned value: " + Returned + Environment.NewLine; }
-                else if (FunctionCode == 2) { ModbusOutput.Text += "Reading discrete input " + startAddr + "." + " Returned value: " + Returned + Environment.NewLine; }
-                else if (FunctionCode == 3) { ModbusOutput.Text += "Reading holding register " + startAddr + "." + " Returned value: " + Returned + Environment.NewLine; }
-                else if (FunctionCode == 4) { ModbusOutput.Text += "Reading input register " + startAddr + "." + " Returned value: " + Returned + Environment.NewLine; }
+                if (PLCReply > 60000) { PLCReply -= 65535; }
+                if (FunctionCode == 1) { ModbusOutput.Text += "Reading coil " + startAddr + "." + " Returned value: " + PLCReply + Environment.NewLine; }
+                else if (FunctionCode == 2) { ModbusOutput.Text += "Reading discrete input " + startAddr + "." + " Returned value: " + PLCReply + Environment.NewLine; }
+                else if (FunctionCode == 3) { ModbusOutput.Text += "Reading holding register " + startAddr + "." + " Returned value: " + PLCReply + Environment.NewLine; }
+                else if (FunctionCode == 4) { ModbusOutput.Text += "Reading input register " + startAddr + "." + " Returned value: " + PLCReply + Environment.NewLine; }
                 else if (FunctionCode == 5) { ModbusOutput.Text += "Write " + desiredVal + " to coil " + startAddr + "." + Environment.NewLine; }
                 else { ModbusOutput.Text += "Write " + desiredVal + " to holding register " + startAddr + "." + Environment.NewLine; }
             } 

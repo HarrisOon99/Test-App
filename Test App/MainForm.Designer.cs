@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.JotBoxTab = new Guna.UI2.WinForms.Guna2Button();
             this.CANBusTab = new Guna.UI2.WinForms.Guna2Button();
             this.ModbusPLCTab = new Guna.UI2.WinForms.Guna2Button();
             this.HomeTab = new Guna.UI2.WinForms.Guna2Button();
@@ -40,7 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.JotBoxTab = new Guna.UI2.WinForms.Guna2Button();
             this.SidePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,6 +59,28 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(224, 751);
             this.SidePanel.TabIndex = 1;
+            // 
+            // JotBoxTab
+            // 
+            this.JotBoxTab.BorderColor = System.Drawing.Color.Transparent;
+            this.JotBoxTab.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.JotBoxTab.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(224)))), ((int)(((byte)(170)))));
+            this.JotBoxTab.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.JotBoxTab.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.JotBoxTab.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.JotBoxTab.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.JotBoxTab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.JotBoxTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.JotBoxTab.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JotBoxTab.ForeColor = System.Drawing.Color.White;
+            this.JotBoxTab.Location = new System.Drawing.Point(3, 259);
+            this.JotBoxTab.Name = "JotBoxTab";
+            this.JotBoxTab.Size = new System.Drawing.Size(252, 54);
+            this.JotBoxTab.TabIndex = 5;
+            this.JotBoxTab.TabStop = false;
+            this.JotBoxTab.Text = "JOT BOX";
+            this.JotBoxTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.JotBoxTab.Click += new System.EventHandler(this.JotBoxTab_Click);
             // 
             // CANBusTab
             // 
@@ -229,28 +252,6 @@
             this.panel1.Size = new System.Drawing.Size(1483, 49);
             this.panel1.TabIndex = 0;
             // 
-            // JotBoxTab
-            // 
-            this.JotBoxTab.BorderColor = System.Drawing.Color.Transparent;
-            this.JotBoxTab.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.JotBoxTab.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(224)))), ((int)(((byte)(170)))));
-            this.JotBoxTab.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.JotBoxTab.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.JotBoxTab.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.JotBoxTab.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.JotBoxTab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.JotBoxTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.JotBoxTab.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JotBoxTab.ForeColor = System.Drawing.Color.White;
-            this.JotBoxTab.Location = new System.Drawing.Point(3, 259);
-            this.JotBoxTab.Name = "JotBoxTab";
-            this.JotBoxTab.Size = new System.Drawing.Size(252, 54);
-            this.JotBoxTab.TabIndex = 5;
-            this.JotBoxTab.TabStop = false;
-            this.JotBoxTab.Text = "JOT BOX";
-            this.JotBoxTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.JotBoxTab.Click += new System.EventHandler(this.JotBoxTab_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +263,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
