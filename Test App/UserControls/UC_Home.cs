@@ -57,8 +57,7 @@ namespace Test_App.UserControls
 
         private void GetHexButton_Click(object sender, EventArgs e)
         {
-            int Deci = Int16.Parse(DeciValue.Text);
-            try { string Hex = Deci.ToString("X"); HexValue.Text = Hex; }
+            try  { int Deci = Int16.Parse(DeciValue.Text); string Hex = Deci.ToString("X"); HexValue.Text = Hex;  }
             catch { MessageBox.Show("Textbox cannot be left empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
@@ -80,6 +79,17 @@ namespace Test_App.UserControls
         private void GetDeciButton_MouseLeave(object sender, EventArgs e)
         {
             HexValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#EAEDED");
+        }
+
+        private void BitConverterButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] IntArray = InputText.Text.Split(' ');
+                byte[] bitInput = Array.ConvertAll(IntArray, Convert.ToByte);
+                IntValue.Text = BitConverter.ToSingle(bitInput, 0).ToString();
+            }
+            catch { MessageBox.Show("Textbox cannot be left empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

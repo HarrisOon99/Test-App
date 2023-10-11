@@ -39,7 +39,7 @@ namespace Test_App
                         }
                     }
                 }
-                catch (Exception ex) { MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+                catch (Exception ex) { MessageBox.Show("HTTP not connected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
             }
         }
 

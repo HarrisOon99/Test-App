@@ -32,7 +32,7 @@ namespace Test_App.UserControls
                 else if (BoxState == "CRITICAL") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C"); }
                 else { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C"); }
             }
-            catch { BoxStateText.Text = "An error has occured."; }
+            catch (Exception) { BoxStateText.Text = "NOT CONNECTED"; }
         }
 
         // Reset box button.

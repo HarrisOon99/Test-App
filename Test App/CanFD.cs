@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Kvaser.CanLib;
 
 namespace Test_App
@@ -16,11 +17,16 @@ namespace Test_App
         {
             int handle;
             Canlib.canStatus status;
-            handle = Canlib.canOpenChannel(ChannelNum, Canlib.canOPEN_CAN_FD | Canlib.canOPEN_REQUIRE_EXTENDED);    // Open CAN channel.
-            status = Canlib.canSetBusParams(handle, Canlib.canFD_BITRATE_1M_80P, 63, 16, 16, 3);                    // Define arbitration phase parameters.
-            status = Canlib.canSetBusParamsFd(handle, Canlib.canFD_BITRATE_4M_80P, 15, 4, 4);                       // Define data phase parameters.
-            status = Canlib.canBusOn(handle);                                                                       // Go onto bus.
-            return handle;
+            try
+            {
+                handle = Canlib.canOpenChannel(ChannelNum, Canlib.canOPEN_CAN_FD | Canlib.canOPEN_REQUIRE_EXTENDED);    // Open CAN channel.
+                if (handle < 0) { throw new Exception("CanFD handle is not connected."); }
+                status = Canlib.canSetBusParams(handle, Canlib.canFD_BITRATE_1M_80P, 63, 16, 16, 3);                    // Define arbitration phase parameters.
+                status = Canlib.canSetBusParamsFd(handle, Canlib.canFD_BITRATE_4M_80P, 15, 4, 4);                       // Define data phase parameters.
+                status = Canlib.canBusOn(handle);                                                                       // Go onto bus.
+                return handle;
+            }
+            catch (Exception e) { MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return handle = -1; }
         }
 
         // Close CAN communication channel.

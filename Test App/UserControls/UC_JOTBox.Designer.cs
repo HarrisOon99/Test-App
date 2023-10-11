@@ -376,7 +376,7 @@
             this.BoxStateText.Location = new System.Drawing.Point(114, 175);
             this.BoxStateText.Name = "BoxStateText";
             this.BoxStateText.ReadOnly = true;
-            this.BoxStateText.Size = new System.Drawing.Size(109, 24);
+            this.BoxStateText.Size = new System.Drawing.Size(186, 24);
             this.BoxStateText.TabIndex = 80;
             this.BoxStateText.Text = "OFF";
             // 
