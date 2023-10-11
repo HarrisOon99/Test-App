@@ -24,7 +24,7 @@ namespace Test_App.UserControls
             { 
                 TCPConnect.Text = "Disconnect";
                 NewTCPComs = new ModbusTCP();
-                client = NewTCPComs.modbusTCP_open();
+                client = NewTCPComs.ModbusTCP_open();
                 if (client != null) 
                 { 
                     ModStateText.Text = "CONNECTED";
@@ -87,7 +87,7 @@ namespace Test_App.UserControls
         // Toggle PIM on and off
         private void PowerButton_Click(object sender, EventArgs e)
         {
-            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch {  }
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.ModbusTCP_open(); } } catch {  }
             if (PowerButton.Text == "OFF")
             {
                 try { NewTCPComs.TCP_Mssg_Send(client, 1, 1285, 5, 1); }
@@ -142,7 +142,7 @@ namespace Test_App.UserControls
         // Toggle MCM on and off
         private void MCMButton_Click(object sender, EventArgs e)
         {
-            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch { }
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.ModbusTCP_open(); } } catch { }
             if (MCMButton.Text == "OFF")
             {
                 try { NewTCPComs.TCP_Mssg_Send(client, 1, 1288, 5, 1); }
@@ -446,7 +446,7 @@ namespace Test_App.UserControls
         // Send custom command function.
         private void CmmdSend_Click(object sender, EventArgs e)
         {
-            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.modbusTCP_open(); } } catch { }
+            try { if (!NewTCPComs.SocketConnected(client)) { client = NewTCPComs.ModbusTCP_open(); } } catch { }
             try
             {
                 if (FunctionComboBox.Text == "") { throw new ArgumentException("Please select function code."); }

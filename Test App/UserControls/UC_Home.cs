@@ -19,8 +19,8 @@ namespace Test_App.UserControls
             int dataBits = 8;
             StopBits stopBits = StopBits.One;
             string receivedMssg = "";
-
             SerialPort serialPort = new SerialPort(portName, baudRate, parity, dataBits, stopBits);
+
             try
             {
                 serialPort.Open();

@@ -14,7 +14,7 @@ namespace Test_App
         public ModbusTCP() { }
 
         // Creating TCP connection
-        public Socket modbusTCP_open ()
+        public Socket ModbusTCP_open ()
         {
             // Setting up TCP connection through ethernet port.
             int TCPPort = 502;
@@ -58,20 +58,16 @@ namespace Test_App
             ushort reply = 0xFFFF;
             ushort newStartAddr = Convert.ToUInt16(startAddr - 1);
 
-            if (function == 5)
-            {
-                if (NoP == 1) { NoP = 65280; }
-                else { NoP = 0; }
-            }
-
+            if (function == 5) { if (NoP == 1) { NoP = 65280; } else { NoP = 0; } }
             frame = BuildMssg(slaveAddr, newStartAddr, function, NoP);
+
             try { client.Send(frame); } catch (Exception ex) { Console.WriteLine(ex.ToString()); }
-            check_respnd(client, ref reply);
+            Check_respnd(client, ref reply);
             return reply;
         }
 
         // Check TCP response.
-        static void check_respnd(Socket client, ref ushort reply)
+        static void Check_respnd(Socket client, ref ushort reply)
         {
             byte[] returnValue = new byte[12];                      // For returning value from socket.
             try { client.Receive(returnValue); } catch (TimeoutException ex) { throw ex; }

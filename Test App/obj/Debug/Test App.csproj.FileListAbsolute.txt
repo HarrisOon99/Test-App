@@ -1,7 +1,6 @@
 C:\Projects\C# Projects\Test App\Test App\bin\Debug\Test App.exe.config
 C:\Projects\C# Projects\Test App\Test App\bin\Debug\Test App.exe
 C:\Projects\C# Projects\Test App\Test App\bin\Debug\Test App.pdb
-C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test App.csproj.AssemblyReference.cache
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.MainForm.resources
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test_App.Properties.Resources.resources
 C:\Projects\C# Projects\Test App\Test App\obj\Debug\Test App.csproj.GenerateResource.cache

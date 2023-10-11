@@ -16,7 +16,6 @@ namespace Test_App
             using (var httpClient = new HttpClient())
             {
                 var url = BoxURL + "/" + Box + "/command";
-
                 try
                 {
                     if (userCommand == null) { return "Command cannot be null. Try again."; }
@@ -39,7 +38,7 @@ namespace Test_App
                         }
                     }
                 }
-                catch (Exception ex) { MessageBox.Show("HTTP not connected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+                catch (Exception) { MessageBox.Show("HTTP not connected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
             }
         }
 
