@@ -61,25 +61,13 @@ namespace Test_App.UserControls
             catch { MessageBox.Show("Textbox cannot be left empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private void GetHexButton_MouseHover(object sender, EventArgs e)
-        {
-            DeciValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#AED6F1");
-        }
+        private void GetHexButton_MouseHover(object sender, EventArgs e) { DeciValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#AED6F1"); }
 
-        private void GetHexButton_MouseLeave(object sender, EventArgs e)
-        {
-            DeciValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#EAEDED");
-        }
+        private void GetHexButton_MouseLeave(object sender, EventArgs e) { DeciValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#EAEDED"); }
 
-        private void GetDeciButton_MouseHover(object sender, EventArgs e)
-        {
-            HexValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#D2B4DE");
-        }
+        private void GetDeciButton_MouseHover(object sender, EventArgs e) { HexValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#D2B4DE"); }
 
-        private void GetDeciButton_MouseLeave(object sender, EventArgs e)
-        {
-            HexValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#EAEDED");
-        }
+        private void GetDeciButton_MouseLeave(object sender, EventArgs e) { HexValue.FillColor = System.Drawing.ColorTranslator.FromHtml("#EAEDED"); }
 
         private void BitConverterButton_Click(object sender, EventArgs e)
         {
@@ -88,8 +76,7 @@ namespace Test_App.UserControls
                 string[] IntArray = InputText.Text.Split(' ');
                 byte[] bitInput = Array.ConvertAll(IntArray, Convert.ToByte);
                 IntValue.Text = BitConverter.ToSingle(bitInput, 0).ToString();
-            }
-            catch { MessageBox.Show("Textbox cannot be left empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            } catch { MessageBox.Show("Textbox cannot be left empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

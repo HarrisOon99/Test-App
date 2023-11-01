@@ -15,3 +15,4 @@ C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.CoreComp
 C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.CopyComplete
 C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.exe
 C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.pdb
+C:\Projects\C# Projects\Test App\Test App\obj\x86\Debug\Test App.csproj.AssemblyReference.cache

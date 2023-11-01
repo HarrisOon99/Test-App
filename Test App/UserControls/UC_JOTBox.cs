@@ -24,7 +24,7 @@ namespace Test_App.UserControls
         {
             try
             {
-                string BoxState = await NewHTTPComs.GetState(BoxURL.Text, M10ComboBox.Text);
+                string BoxState = await NewHTTPComs.GetStatef(BoxURL.Text, M10ComboBox.Text);
                 if (BoxState == "OFF") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D"); }
                 else if (BoxState == "OPEN") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D"); }
                 else if (BoxState == "BLOCKED") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71"); }
