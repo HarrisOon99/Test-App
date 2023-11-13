@@ -1,4 +1,7 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Test_App.UserControls
@@ -6,6 +9,7 @@ namespace Test_App.UserControls
     public partial class UC_JOTBox : UserControl
     {
         HTTP NewHTTPComs = new HTTP();
+        private BackgroundWorker BoxSubsctiption;
 
         // curl request input for reference:
         // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"get_state\"}" http://100.100.100.100:80/slide1/command
@@ -17,6 +21,10 @@ namespace Test_App.UserControls
             M10ComboBox.SelectedIndex = 0;
             BoxURL.Text = "http://100.100.100.100:80";
             GetBoxState();
+
+            BoxSubsctiption = new BackgroundWorker();
+            BoxSubsctiption.DoWork += StartSubsctiption;
+            BoxSubsctiption.WorkerSupportsCancellation = true;
         }
 
         // Function to get box state.
@@ -24,7 +32,7 @@ namespace Test_App.UserControls
         {
             try
             {
-                string BoxState = await NewHTTPComs.GetStatef(BoxURL.Text, M10ComboBox.Text);
+                string BoxState = await NewHTTPComs.GetState(BoxURL.Text, M10ComboBox.Text);
                 if (BoxState == "OFF") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D"); }
                 else if (BoxState == "OPEN") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D4AC0D"); }
                 else if (BoxState == "BLOCKED") { BoxStateText.Text = BoxState; BoxStateText.ForeColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71"); }
@@ -90,5 +98,36 @@ namespace Test_App.UserControls
 
         // Clear command prompt.
         private void ClearButton_Click(object sender, EventArgs e) { HTTPOutput.Text = string.Empty; }
+
+        // Trial subscription mode that reports box state every 10 seconds.
+        private void StartSubsctiption(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+            string boxUrl = string.Empty;
+            string boxNum = string.Empty;
+
+            while (!worker.CancellationPending)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (worker.CancellationPending) { break; }
+                    Task.Delay(1000).Wait();
+                }
+
+                M10ComboBox.Invoke((MethodInvoker)delegate { boxNum = M10ComboBox.Text; });
+                BoxURL.Invoke((MethodInvoker)delegate { boxUrl = BoxURL.Text; });
+                string StateReport = NewHTTPComs.GetState(boxUrl, boxNum).Result; // Box state update here.
+
+                HTTPOutput.Invoke((MethodInvoker)delegate { HTTPOutput.Text += "Current box state: " + StateReport + Environment.NewLine; });
+                BoxStateText.Invoke((MethodInvoker)delegate { GetBoxState(); });
+            }
+        }
+
+        // Checkbox for turning on subscription mode.
+        private void PollChckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PollChckBox.Checked) { BoxSubsctiption.RunWorkerAsync(); }
+            else { BoxSubsctiption.CancelAsync(); }
+        }
     }
 }

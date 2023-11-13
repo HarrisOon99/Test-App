@@ -10,7 +10,7 @@ namespace Test_App
     {
         // curl request input for reference:
         // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"get_state\"}" http://100.100.100.100:80/slide1/command
-        // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"subscribe\", \"address\": \"http://100.100.100.100:80/stateupdate/box1\"}" http://100.100.100.100:80/slide1/command
+        // curl -X POST -H "Content-Type: application/json" -d "{\"cmd\": \"subscribe\", \"address\": \"http://100.100.100.100:80/stateupdate/slide1\"}" http://100.100.100.100:80/slide1/command
         public async Task<string> HTTPSend(string userCommand, string BoxURL, string Box)
         {
             using (var httpClient = new HttpClient())

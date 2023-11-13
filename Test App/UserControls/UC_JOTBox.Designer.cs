@@ -46,6 +46,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SlideLabel = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.PollChckBox = new System.Windows.Forms.CheckBox();
             this.BoxStateText = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.BoxURL = new Guna.UI2.WinForms.Guna2TextBox();
@@ -262,7 +263,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(127, 19);
             this.textBox1.TabIndex = 72;
-            this.textBox1.Text = "Enter Command:";
+            this.textBox1.Text = "Command Prompt:";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HTTPOutput
@@ -352,6 +353,7 @@
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderThickness = 2;
+            this.guna2GradientPanel2.Controls.Add(this.PollChckBox);
             this.guna2GradientPanel2.Controls.Add(this.BoxStateText);
             this.guna2GradientPanel2.Controls.Add(this.textBox5);
             this.guna2GradientPanel2.Controls.Add(this.BoxURL);
@@ -366,6 +368,19 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(343, 263);
             this.guna2GradientPanel2.TabIndex = 77;
+            // 
+            // PollChckBox
+            // 
+            this.PollChckBox.AutoSize = true;
+            this.PollChckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.PollChckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PollChckBox.Location = new System.Drawing.Point(234, 161);
+            this.PollChckBox.Name = "PollChckBox";
+            this.PollChckBox.Size = new System.Drawing.Size(89, 23);
+            this.PollChckBox.TabIndex = 78;
+            this.PollChckBox.Text = "Poll State";
+            this.PollChckBox.UseVisualStyleBackColor = false;
+            this.PollChckBox.CheckedChanged += new System.EventHandler(this.PollChckBox_CheckedChanged);
             // 
             // BoxStateText
             // 
@@ -507,5 +522,6 @@
         private Guna.UI2.WinForms.Guna2TextBox BoxURL;
         private System.Windows.Forms.TextBox BoxStateText;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.CheckBox PollChckBox;
     }
 }
