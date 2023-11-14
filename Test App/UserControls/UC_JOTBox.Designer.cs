@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.ReEngageButton = new Guna.UI2.WinForms.Guna2Button();
             this.ReleaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.EngageButton = new Guna.UI2.WinForms.Guna2Button();
@@ -46,13 +47,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SlideLabel = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.PollChckBox = new System.Windows.Forms.CheckBox();
+            this.PollBttn = new Guna.UI2.WinForms.Guna2Button();
             this.BoxStateText = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.BoxURL = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.GetStateButton = new Guna.UI2.WinForms.Guna2Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.OutputPanel.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -60,8 +59,10 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
             this.guna2GradientPanel1.BorderRadius = 10;
+            this.guna2GradientPanel1.Controls.Add(this.textBox3);
             this.guna2GradientPanel1.Controls.Add(this.ReEngageButton);
             this.guna2GradientPanel1.Controls.Add(this.ReleaseButton);
             this.guna2GradientPanel1.Controls.Add(this.EngageButton);
@@ -70,25 +71,38 @@
             this.guna2GradientPanel1.Controls.Add(this.OpenButton);
             this.guna2GradientPanel1.Controls.Add(this.InitializeButton);
             this.guna2GradientPanel1.Controls.Add(this.ResetButton);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(54, 310);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(435, 28);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(343, 393);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(538, 268);
             this.guna2GradientPanel1.TabIndex = 30;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(26, 15);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(160, 22);
+            this.textBox3.TabIndex = 73;
+            this.textBox3.Text = "Shortcut controls";
             // 
             // ReEngageButton
             // 
-            this.ReEngageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.ReEngageButton.BackColor = System.Drawing.Color.Transparent;
             this.ReEngageButton.BorderRadius = 5;
             this.ReEngageButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ReEngageButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ReEngageButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ReEngageButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ReEngageButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.ReEngageButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReEngageButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.ReEngageButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReEngageButton.ForeColor = System.Drawing.Color.Black;
-            this.ReEngageButton.Location = new System.Drawing.Point(94, 337);
+            this.ReEngageButton.Location = new System.Drawing.Point(278, 197);
             this.ReEngageButton.Name = "ReEngageButton";
             this.ReEngageButton.Size = new System.Drawing.Size(152, 40);
             this.ReEngageButton.TabIndex = 37;
@@ -96,16 +110,16 @@
             // 
             // ReleaseButton
             // 
-            this.ReleaseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.ReleaseButton.BackColor = System.Drawing.Color.Transparent;
             this.ReleaseButton.BorderRadius = 5;
             this.ReleaseButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ReleaseButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ReleaseButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ReleaseButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ReleaseButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.ReleaseButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReleaseButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.ReleaseButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReleaseButton.ForeColor = System.Drawing.Color.Black;
-            this.ReleaseButton.Location = new System.Drawing.Point(94, 291);
+            this.ReleaseButton.Location = new System.Drawing.Point(110, 197);
             this.ReleaseButton.Name = "ReleaseButton";
             this.ReleaseButton.Size = new System.Drawing.Size(152, 40);
             this.ReleaseButton.TabIndex = 36;
@@ -113,16 +127,16 @@
             // 
             // EngageButton
             // 
-            this.EngageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.EngageButton.BackColor = System.Drawing.Color.Transparent;
             this.EngageButton.BorderRadius = 5;
             this.EngageButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.EngageButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.EngageButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.EngageButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EngageButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.EngageButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EngageButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.EngageButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EngageButton.ForeColor = System.Drawing.Color.Black;
-            this.EngageButton.Location = new System.Drawing.Point(94, 245);
+            this.EngageButton.Location = new System.Drawing.Point(278, 151);
             this.EngageButton.Name = "EngageButton";
             this.EngageButton.Size = new System.Drawing.Size(152, 40);
             this.EngageButton.TabIndex = 35;
@@ -130,16 +144,16 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(94, 199);
+            this.guna2Button1.Location = new System.Drawing.Point(110, 151);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(152, 40);
             this.guna2Button1.TabIndex = 34;
@@ -147,16 +161,16 @@
             // 
             // Close1Button
             // 
-            this.Close1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.Close1Button.BackColor = System.Drawing.Color.Transparent;
             this.Close1Button.BorderRadius = 5;
             this.Close1Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Close1Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Close1Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Close1Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close1Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.Close1Button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close1Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.Close1Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close1Button.ForeColor = System.Drawing.Color.Black;
-            this.Close1Button.Location = new System.Drawing.Point(94, 153);
+            this.Close1Button.Location = new System.Drawing.Point(278, 105);
             this.Close1Button.Name = "Close1Button";
             this.Close1Button.Size = new System.Drawing.Size(152, 40);
             this.Close1Button.TabIndex = 7;
@@ -165,16 +179,16 @@
             // 
             // OpenButton
             // 
-            this.OpenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.OpenButton.BackColor = System.Drawing.Color.Transparent;
             this.OpenButton.BorderRadius = 5;
             this.OpenButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.OpenButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.OpenButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.OpenButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.OpenButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.OpenButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.OpenButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenButton.ForeColor = System.Drawing.Color.Black;
-            this.OpenButton.Location = new System.Drawing.Point(94, 107);
+            this.OpenButton.Location = new System.Drawing.Point(110, 105);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(152, 40);
             this.OpenButton.TabIndex = 6;
@@ -183,16 +197,16 @@
             // 
             // InitializeButton
             // 
-            this.InitializeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.InitializeButton.BackColor = System.Drawing.Color.Transparent;
             this.InitializeButton.BorderRadius = 5;
             this.InitializeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.InitializeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.InitializeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.InitializeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.InitializeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.InitializeButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitializeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.InitializeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitializeButton.ForeColor = System.Drawing.Color.Black;
-            this.InitializeButton.Location = new System.Drawing.Point(94, 61);
+            this.InitializeButton.Location = new System.Drawing.Point(278, 59);
             this.InitializeButton.Name = "InitializeButton";
             this.InitializeButton.Size = new System.Drawing.Size(152, 40);
             this.InitializeButton.TabIndex = 5;
@@ -201,16 +215,16 @@
             // 
             // ResetButton
             // 
-            this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.ResetButton.BackColor = System.Drawing.Color.Transparent;
             this.ResetButton.BorderRadius = 5;
             this.ResetButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ResetButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ResetButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ResetButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ResetButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.ResetButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.ResetButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.Black;
-            this.ResetButton.Location = new System.Drawing.Point(94, 15);
+            this.ResetButton.Location = new System.Drawing.Point(110, 59);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(152, 40);
             this.ResetButton.TabIndex = 4;
@@ -220,32 +234,33 @@
             // OutputPanel
             // 
             this.OutputPanel.AutoScroll = true;
-            this.OutputPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.OutputPanel.BackColor = System.Drawing.Color.Transparent;
+            this.OutputPanel.BorderColor = System.Drawing.Color.White;
             this.OutputPanel.BorderRadius = 10;
-            this.OutputPanel.BorderThickness = 2;
+            this.OutputPanel.BorderThickness = 1;
             this.OutputPanel.Controls.Add(this.ClearButton);
             this.OutputPanel.Controls.Add(this.textBox1);
             this.OutputPanel.Controls.Add(this.HTTPOutput);
-            this.OutputPanel.FillColor = System.Drawing.Color.Black;
-            this.OutputPanel.FillColor2 = System.Drawing.Color.Black;
-            this.OutputPanel.Location = new System.Drawing.Point(487, 37);
+            this.OutputPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+            this.OutputPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+            this.OutputPanel.Location = new System.Drawing.Point(32, 319);
             this.OutputPanel.Name = "OutputPanel";
-            this.OutputPanel.Size = new System.Drawing.Size(711, 666);
+            this.OutputPanel.Size = new System.Drawing.Size(530, 393);
             this.OutputPanel.TabIndex = 71;
             // 
             // ClearButton
             // 
-            this.ClearButton.BackColor = System.Drawing.Color.Black;
+            this.ClearButton.BackColor = System.Drawing.Color.Transparent;
             this.ClearButton.BorderColor = System.Drawing.Color.White;
             this.ClearButton.BorderRadius = 5;
             this.ClearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ClearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ClearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ClearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(250)))), ((int)(((byte)(110)))));
-            this.ClearButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.ClearButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.Black;
-            this.ClearButton.Location = new System.Drawing.Point(297, 610);
+            this.ClearButton.Location = new System.Drawing.Point(403, 338);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(110, 36);
             this.ClearButton.TabIndex = 72;
@@ -254,14 +269,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(14, 13);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(18, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(127, 19);
+            this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 72;
             this.textBox1.Text = "Command Prompt:";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -269,7 +284,7 @@
             // HTTPOutput
             // 
             this.HTTPOutput.AutoScroll = true;
-            this.HTTPOutput.BackColor = System.Drawing.Color.Black;
+            this.HTTPOutput.BackColor = System.Drawing.Color.Transparent;
             this.HTTPOutput.BorderColor = System.Drawing.Color.Transparent;
             this.HTTPOutput.BorderThickness = 0;
             this.HTTPOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -278,12 +293,12 @@
             this.HTTPOutput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.HTTPOutput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.HTTPOutput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.HTTPOutput.FillColor = System.Drawing.Color.Black;
+            this.HTTPOutput.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.HTTPOutput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.HTTPOutput.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HTTPOutput.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HTTPOutput.ForeColor = System.Drawing.Color.White;
             this.HTTPOutput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.HTTPOutput.Location = new System.Drawing.Point(14, 33);
+            this.HTTPOutput.Location = new System.Drawing.Point(18, 54);
             this.HTTPOutput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HTTPOutput.MaxLength = 60000;
             this.HTTPOutput.Multiline = true;
@@ -292,7 +307,7 @@
             this.HTTPOutput.PlaceholderForeColor = System.Drawing.Color.White;
             this.HTTPOutput.PlaceholderText = "";
             this.HTTPOutput.SelectedText = "";
-            this.HTTPOutput.Size = new System.Drawing.Size(340, 575);
+            this.HTTPOutput.Size = new System.Drawing.Size(360, 320);
             this.HTTPOutput.TabIndex = 71;
             this.HTTPOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
@@ -301,111 +316,108 @@
             this.M10ComboBox.BackColor = System.Drawing.Color.Transparent;
             this.M10ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.M10ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.M10ComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(201)))), ((int)(((byte)(202)))));
             this.M10ComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.M10ComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.M10ComboBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M10ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.M10ComboBox.ForeColor = System.Drawing.Color.Black;
             this.M10ComboBox.ItemHeight = 30;
-            this.M10ComboBox.Location = new System.Drawing.Point(168, 83);
+            this.M10ComboBox.Location = new System.Drawing.Point(111, 65);
             this.M10ComboBox.Name = "M10ComboBox";
             this.M10ComboBox.Size = new System.Drawing.Size(209, 36);
             this.M10ComboBox.TabIndex = 75;
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(58, 101);
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.Color.LightGray;
+            this.textBox7.Location = new System.Drawing.Point(18, 108);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(67, 24);
+            this.textBox7.Size = new System.Drawing.Size(67, 22);
             this.textBox7.TabIndex = 74;
             this.textBox7.Text = "URL  :";
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(21, 58);
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.LightGray;
+            this.textBox2.Location = new System.Drawing.Point(18, 71);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(109, 24);
+            this.textBox2.Size = new System.Drawing.Size(89, 22);
             this.textBox2.TabIndex = 73;
             this.textBox2.Text = "Box/Slide :";
             // 
             // SlideLabel
             // 
-            this.SlideLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.SlideLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
             this.SlideLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SlideLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlideLabel.Location = new System.Drawing.Point(69, 51);
+            this.SlideLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlideLabel.ForeColor = System.Drawing.Color.White;
+            this.SlideLabel.Location = new System.Drawing.Point(18, 15);
             this.SlideLabel.Name = "SlideLabel";
             this.SlideLabel.ReadOnly = true;
-            this.SlideLabel.Size = new System.Drawing.Size(273, 26);
+            this.SlideLabel.Size = new System.Drawing.Size(160, 22);
             this.SlideLabel.TabIndex = 72;
             this.SlideLabel.Text = "M10 Box controller";
             // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderThickness = 2;
-            this.guna2GradientPanel2.Controls.Add(this.PollChckBox);
+            this.guna2GradientPanel2.Controls.Add(this.SlideLabel);
+            this.guna2GradientPanel2.Controls.Add(this.M10ComboBox);
+            this.guna2GradientPanel2.Controls.Add(this.PollBttn);
             this.guna2GradientPanel2.Controls.Add(this.BoxStateText);
-            this.guna2GradientPanel2.Controls.Add(this.textBox5);
             this.guna2GradientPanel2.Controls.Add(this.BoxURL);
             this.guna2GradientPanel2.Controls.Add(this.textBox4);
             this.guna2GradientPanel2.Controls.Add(this.textBox2);
             this.guna2GradientPanel2.Controls.Add(this.GetStateButton);
             this.guna2GradientPanel2.Controls.Add(this.textBox7);
-            this.guna2GradientPanel2.Controls.Add(this.textBox3);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(54, 37);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(32, 28);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(343, 263);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(374, 268);
             this.guna2GradientPanel2.TabIndex = 77;
             // 
-            // PollChckBox
+            // PollBttn
             // 
-            this.PollChckBox.AutoSize = true;
-            this.PollChckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.PollChckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PollChckBox.Location = new System.Drawing.Point(234, 161);
-            this.PollChckBox.Name = "PollChckBox";
-            this.PollChckBox.Size = new System.Drawing.Size(89, 23);
-            this.PollChckBox.TabIndex = 78;
-            this.PollChckBox.Text = "Poll State";
-            this.PollChckBox.UseVisualStyleBackColor = false;
-            this.PollChckBox.CheckedChanged += new System.EventHandler(this.PollChckBox_CheckedChanged);
+            this.PollBttn.BackColor = System.Drawing.Color.Transparent;
+            this.PollBttn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.PollBttn.BorderRadius = 5;
+            this.PollBttn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PollBttn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PollBttn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PollBttn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PollBttn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.PollBttn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PollBttn.ForeColor = System.Drawing.Color.Black;
+            this.PollBttn.Location = new System.Drawing.Point(218, 197);
+            this.PollBttn.Name = "PollBttn";
+            this.PollBttn.Size = new System.Drawing.Size(101, 40);
+            this.PollBttn.TabIndex = 78;
+            this.PollBttn.Text = "Poll";
+            this.PollBttn.Click += new System.EventHandler(this.PollBttn_Click);
             // 
             // BoxStateText
             // 
-            this.BoxStateText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.BoxStateText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
             this.BoxStateText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BoxStateText.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxStateText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoxStateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.BoxStateText.Location = new System.Drawing.Point(114, 175);
+            this.BoxStateText.Location = new System.Drawing.Point(111, 151);
             this.BoxStateText.Name = "BoxStateText";
             this.BoxStateText.ReadOnly = true;
-            this.BoxStateText.Size = new System.Drawing.Size(186, 24);
+            this.BoxStateText.Size = new System.Drawing.Size(186, 22);
             this.BoxStateText.TabIndex = 80;
             this.BoxStateText.Text = "OFF";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(114, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(109, 24);
-            this.textBox5.TabIndex = 79;
-            this.textBox5.Text = "Slide 1";
             // 
             // BoxURL
             // 
@@ -415,12 +427,11 @@
             this.BoxURL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.BoxURL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.BoxURL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.BoxURL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.BoxURL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BoxURL.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxURL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoxURL.ForeColor = System.Drawing.Color.Black;
             this.BoxURL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BoxURL.Location = new System.Drawing.Point(114, 89);
+            this.BoxURL.Location = new System.Drawing.Point(111, 108);
             this.BoxURL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BoxURL.MaxLength = 4;
             this.BoxURL.Name = "BoxURL";
@@ -433,19 +444,20 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(21, 175);
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.LightGray;
+            this.textBox4.Location = new System.Drawing.Point(18, 151);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(89, 24);
+            this.textBox4.Size = new System.Drawing.Size(89, 22);
             this.textBox4.TabIndex = 76;
             this.textBox4.Text = "Box State :";
             // 
             // GetStateButton
             // 
-            this.GetStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
+            this.GetStateButton.BackColor = System.Drawing.Color.Transparent;
             this.GetStateButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
             this.GetStateButton.BorderRadius = 5;
             this.GetStateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -453,46 +465,32 @@
             this.GetStateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.GetStateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.GetStateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(166)))));
-            this.GetStateButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GetStateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetStateButton.ForeColor = System.Drawing.Color.Black;
-            this.GetStateButton.Location = new System.Drawing.Point(94, 205);
+            this.GetStateButton.Location = new System.Drawing.Point(49, 197);
             this.GetStateButton.Name = "GetStateButton";
             this.GetStateButton.Size = new System.Drawing.Size(152, 40);
             this.GetStateButton.TabIndex = 0;
             this.GetStateButton.Text = "Get State";
             this.GetStateButton.Click += new System.EventHandler(this.GetStateButton_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(150)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(8, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(127, 24);
-            this.textBox3.TabIndex = 75;
-            this.textBox3.Text = "Controlling :";
-            // 
             // UC_JOTBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(201)))), ((int)(((byte)(202)))));
-            this.Controls.Add(this.M10ComboBox);
-            this.Controls.Add(this.SlideLabel);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.OutputPanel);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UC_JOTBox";
             this.Size = new System.Drawing.Size(1260, 745);
             this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.OutputPanel.ResumeLayout(false);
             this.OutputPanel.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -516,12 +514,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox SlideLabel;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.TextBox textBox3;
         private Guna.UI2.WinForms.Guna2Button GetStateButton;
         private System.Windows.Forms.TextBox textBox4;
         private Guna.UI2.WinForms.Guna2TextBox BoxURL;
         private System.Windows.Forms.TextBox BoxStateText;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox PollChckBox;
+        private Guna.UI2.WinForms.Guna2Button PollBttn;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -20,7 +20,6 @@ namespace Test_App.UserControls
             M10ComboBox.Items.AddRange(new object[] { "slide1" });
             M10ComboBox.SelectedIndex = 0;
             BoxURL.Text = "http://100.100.100.100:80";
-            GetBoxState();
 
             BoxSubsctiption = new BackgroundWorker();
             BoxSubsctiption.DoWork += StartSubsctiption;
@@ -108,11 +107,8 @@ namespace Test_App.UserControls
 
             while (!worker.CancellationPending)
             {
-                for (int i = 0; i < 10; i++)
-                {
-                    if (worker.CancellationPending) { break; }
-                    Task.Delay(1000).Wait();
-                }
+                for (int i = 0; i < 10; i++) { Task.Delay(1000).Wait(); }
+                if (worker.CancellationPending) { break; }
 
                 M10ComboBox.Invoke((MethodInvoker)delegate { boxNum = M10ComboBox.Text; });
                 BoxURL.Invoke((MethodInvoker)delegate { boxUrl = BoxURL.Text; });
@@ -123,11 +119,13 @@ namespace Test_App.UserControls
             }
         }
 
-        // Checkbox for turning on subscription mode.
-        private void PollChckBox_CheckedChanged(object sender, EventArgs e)
+        // Poll button to activate subscription mode.
+        private void PollBttn_Click(object sender, EventArgs e)
         {
-            if (PollChckBox.Checked) { BoxSubsctiption.RunWorkerAsync(); }
-            else { BoxSubsctiption.CancelAsync(); }
+            if (PollBttn.FillColor == System.Drawing.ColorTranslator.FromHtml("#E74C3C")) 
+            { BoxSubsctiption.RunWorkerAsync(); PollBttn.FillColor = System.Drawing.ColorTranslator.FromHtml("#2ECC71"); }
+            else 
+            { BoxSubsctiption.CancelAsync(); PollBttn.FillColor = System.Drawing.ColorTranslator.FromHtml("#E74C3C"); }
         }
     }
 }
